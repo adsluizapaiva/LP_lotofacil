@@ -1,5 +1,10 @@
 # LOTOFÁCIL - Sistema de Loteria em Java
 
+<p align="center">
+   <img src="https://github.com/adsluizapaiva/LP_lotofacil/blob/main/super.png" >
+</p>
+
+
 🎲 Este é um sistema de loteria desenvolvido em Java chamado LOTOFÁCIL. O sistema permite gerar jogos aleatórios, realizar apostas, verificar resultados e calcular prêmios de acordo com as regras da loteria. A interação com o sistema é feita através do terminal.
 
 ## Funcionalidades
@@ -15,10 +20,8 @@
 3. Compile o projeto utilizando o comando `javac Lotofacil.java`.
 4. Execute o projeto utilizando o comando `java Lotofacil`.
 
-## Versão do JDK e Bibliotecas Utilizadas
-
-- Versão do JDK: JDK 8 ou superior.
-- Bibliotecas utilizadas: `Scanner` e `Random`.
-
 ---
+## Conclusão
+Este trabalho faz parte do curso de Análise e Desenvolvimento de Sistemas da Faculdade Newton Paiva e foi desenvolvido por Luiza Paiva (ads.luizapaiva@gmail.com). Contribuições e feedback são bem-vindos para aprimorar ainda mais este projeto simulado.
 
+Agradecemos por explorar o repositório do LOTOFACIL!
