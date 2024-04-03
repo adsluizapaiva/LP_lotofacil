@@ -25,3 +25,8 @@
 Este trabalho faz parte do curso de Análise e Desenvolvimento de Sistemas da Faculdade Newton Paiva e foi desenvolvido por Luiza Paiva (ads.luizapaiva@gmail.com). Contribuições e feedback são bem-vindos para aprimorar ainda mais este projeto simulado.
 
 Agradecemos por explorar o repositório do LOTOFACIL!
+
+## Vídeo Explicativo da Interface Gráfica
+
+[Assista ao vídeo explicativo da interface gráfica](https://www.youtube.com/watch?v=VIDEO_ID_AQUI)
+
