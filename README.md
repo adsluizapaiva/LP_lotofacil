@@ -28,5 +28,5 @@ Agradecemos por explorar o repositório do LOTOFACIL!
 
 ## GIF Explicativo da Interface Gráfica
 
-![GIF explicativo da interface gráfica](https://github.com/adsluizapaiva/LP_lotofacil/blob/main/IMG_5567.gif)
+![GIF explicativo da interface gráfica](https://github.com/adsluizapaiva/LP_lotofacil/raw/main/IMG_5567.gif)
 
