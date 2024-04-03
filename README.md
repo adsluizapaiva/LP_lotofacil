@@ -26,7 +26,7 @@ Este trabalho faz parte do curso de Análise e Desenvolvimento de Sistemas da Fa
 
 Agradecemos por explorar o repositório do LOTOFACIL!
 
-## Vídeo Explicativo da Interface Gráfica
+## GIF Explicativo da Interface Gráfica
 
-[Assista ao vídeo explicativo da interface gráfica](https://www.youtube.com/watch?v=VIDEO_ID_AQUI)
+![GIF explicativo da interface gráfica](https://github.com/adsluizapaiva/LP_lotofacil/blob/main/IMG_5567.gif)
 
