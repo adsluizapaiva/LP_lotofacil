@@ -1,0 +1,186 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
+
+public class LoteriaGUI {
+    private final Random random = new Random();
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new LoteriaGUI().createAndShowGUI();
+            }
+        });
+    }
+
+    private void createAndShowGUI() {
+        JFrame frame = new JFrame("Menu LOTOFÁCIL");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+        frame.getContentPane().setBackground(new Color(255, 218, 185)); // Cor de fundo pêssego
+
+        JPanel panel = new JPanel(new GridLayout(4, 1, 5, 5)); // 4 linhas e 1 coluna
+        panel.setBackground(new Color(255, 218, 185)); // Cor de fundo pêssego
+        frame.add(panel);
+
+        JButton button1 = new JButton("Apostar de 0 a 100");
+        button1.setBackground(new Color(255, 182, 193)); // Rosa claro
+        panel.add(button1);
+
+        JButton button2 = new JButton("Apostar de A à Z");
+        button2.setBackground(new Color(255, 204, 255)); // Roxo claro
+        panel.add(button2);
+
+        JButton button3 = new JButton("Apostar em par ou ímpar");
+        button3.setBackground(new Color(144, 238, 144)); // Verde claro
+        panel.add(button3);
+
+        JButton button4 = new JButton("Sair");
+        button4.setBackground(new Color(255, 99, 71)); // Vermelho claro
+        panel.add(button4);
+
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                abrirJanelaApostarNumero();
+            }
+        });
+
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                abrirJanelaApostarLetra();
+            }
+        });
+
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                abrirJanelaParOuImpar();
+            }
+        });
+
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Fechar o aplicativo
+                System.exit(0);
+            }
+        });
+
+        frame.setVisible(true);
+    }
+
+    private void abrirJanelaApostarNumero() {
+        JFrame frame = new JFrame("Apostar de 0 a 100");
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(400, 200);
+        frame.getContentPane().setBackground(new Color(255, 218, 185)); // Cor de fundo pêssego
+
+        JPanel panel = new JPanel();
+        panel.setBackground(new Color(255, 218, 185)); // Cor de fundo pêssego
+        frame.add(panel);
+
+        JLabel label = new JLabel("Digite um número de 0 a 100:");
+        label.setForeground(new Color(255, 69, 0)); // Vermelho escuro
+        panel.add(label);
+
+        JTextField textField = new JTextField(10);
+        panel.add(textField);
+
+        JButton button = new JButton("Apostar");
+        button.setBackground(new Color(255, 69, 0)); // Vermelho escuro
+        button.setForeground(Color.WHITE);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String numeroApostado = textField.getText();
+                int numeroSorteado = random.nextInt(101);
+                if (numeroApostado.equals(String.valueOf(numeroSorteado))) {
+                    JOptionPane.showMessageDialog(frame, "Parabéns! Você acertou o número sorteado: " + numeroSorteado);
+                } else {
+                    JOptionPane.showMessageDialog(frame, "Que pena! O número sorteado foi: " + numeroSorteado);
+                }
+            }
+        });
+        panel.add(button);
+
+        frame.setVisible(true);
+    }
+
+    private void abrirJanelaApostarLetra() {
+        JFrame frame = new JFrame("Apostar de A à Z");
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(400, 200);
+        frame.getContentPane().setBackground(new Color(255, 218, 185)); // Cor de fundo pêssego
+
+        JPanel panel = new JPanel();
+        panel.setBackground(new Color(255, 218, 185)); // Cor de fundo pêssego
+        frame.add(panel);
+
+        JLabel label = new JLabel("Digite uma letra de A à Z:");
+        label.setForeground(new Color(255, 69, 0)); // Vermelho escuro
+        panel.add(label);
+
+        JTextField textField = new JTextField(1);
+        panel.add(textField);
+
+        JButton button = new JButton("Apostar");
+        button.setBackground(new Color(255, 69, 0)); // Vermelho escuro
+        button.setForeground(Color.WHITE);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String letraApostada = textField.getText().toUpperCase();
+                char letraPremiada = (char) ('A' + random.nextInt(26)); // Sorteia uma letra aleatória de A a Z
+                if (letraApostada.equals(String.valueOf(letraPremiada))) {
+                    JOptionPane.showMessageDialog(frame, "Parabéns! Você acertou a letra premiada: " + letraPremiada);
+                } else {
+                    JOptionPane.showMessageDialog(frame, "Que pena! A letra premiada foi: " + letraPremiada);
+                }
+            }
+        });
+        panel.add(button);
+
+        frame.setVisible(true);
+    }
+
+    private void abrirJanelaParOuImpar() {
+        JFrame frame = new JFrame("Apostar em par ou ímpar");
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(400, 200);
+        frame.getContentPane().setBackground(new Color(255, 218, 185)); // Cor de fundo pêssego
+
+        JPanel panel = new JPanel();
+        panel.setBackground(new Color(255, 218, 185)); // Cor de fundo pêssego
+        frame.add(panel);
+
+        JLabel label = new JLabel("Digite um número inteiro:");
+        label.setForeground(new Color(255, 69, 0)); // Vermelho escuro
+        panel.add(label);
+
+        JTextField textField = new JTextField(10);
+        panel.add(textField);
+
+        JButton button = new JButton("Apostar");
+        button.setBackground(new Color(255, 69, 0)); // Vermelho escuro
+        button.setForeground(Color.WHITE);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int numeroDigitado = Integer.parseInt(textField.getText());
+                if (numeroDigitado % 2 == 0) {
+                    JOptionPane.showMessageDialog(frame, "Você apostou em número par. Parabéns!");
+                } else {
+                    JOptionPane.showMessageDialog(frame, "Que pena! Você apostou em número ímpar.");
+                }
+            }
+        });
+        panel.add(button);
+
+        frame.setVisible(true);
+    }
+}
